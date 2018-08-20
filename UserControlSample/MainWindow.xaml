@@ -7,7 +7,6 @@
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         mc:Ignorable="d" MinHeight="850" MinWidth="850" 
         Title="MainWindow" Height="600" Width="800" WindowStartupLocation="CenterScreen">
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -44,7 +43,7 @@
                     <ProgressBar IsIndeterminate="True" Height="20" Margin="30,30" Foreground="#FFB00606"/>
                     <ProgressBar IsIndeterminate="True" Height="20" Margin="30,30" Foreground="Yellow"/>
                     <ProgressBar IsIndeterminate="True" Height="20" Margin="30,30"/>
-                    <syncfusion:BusyIndicator IsIndeterminate="True" />
+                    <syncfusion:BusyIndicator IsIndeterminate="True"/>
                 </StackPanel>
             </local:HeaderedContentControl.ChildContent>
         </local:HeaderedContentControl>

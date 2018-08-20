@@ -41,5 +41,13 @@ namespace UserControlSample
             get { return (string)GetValue(HeaderProperty); }
             set { SetValue(HeaderProperty, value); }
         }
+        public static readonly DependencyProperty VisibleProperty =
+           DependencyProperty.Register("Visible", typeof(bool), typeof(HeaderedContentControl));
+
+        public string Visible
+        {
+            get { return (string)GetValue(VisibleProperty); }
+            set { SetValue(VisibleProperty, value); }
+        }
     }
 }
