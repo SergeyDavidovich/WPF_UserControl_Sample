@@ -4,9 +4,66 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UserControlSample"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d" MinHeight="850" MinWidth="850" 
+        Title="MainWindow" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="HeaderedContentControl">
+                <Setter Property="Margin" Value="40"/>
+            </Style>
+        </Grid.Resources>
+        <local:HeaderedContentControl Margin="10" Header="Header 1">
+            <local:HeaderedContentControl.ChildContent>
+                <TextBlock Text="This is text content" FontSize="24" Margin="20,0,0,0"/>
+            </local:HeaderedContentControl.ChildContent>
+        </local:HeaderedContentControl>
+        <local:HeaderedContentControl Grid.Row="1" Margin="10" Header="Header 2">
+            <local:HeaderedContentControl.ChildContent>
+                <StackPanel Orientation="Horizontal" Margin="30">
+                    <Calendar/>
+                    <Calendar/>
+                    <Calendar/>
+                    <Calendar/>
+                </StackPanel>
+            </local:HeaderedContentControl.ChildContent>
+        </local:HeaderedContentControl>
+        <local:HeaderedContentControl Grid.RowSpan="2" Grid.Column="1" Margin="10" Header="Header 3">
+            <local:HeaderedContentControl.ChildContent>
+                <StackPanel>
+                    <ProgressBar IsIndeterminate="True" Height="20" Margin="30,30" Foreground="#FFB00606"/>
+                    <ProgressBar IsIndeterminate="True" Height="20" Margin="30,30" Foreground="Yellow"/>
+                    <ProgressBar IsIndeterminate="True" Height="20" Margin="30,30"/>
+                    <syncfusion:BusyIndicator IsIndeterminate="True" />
+                </StackPanel>
+            </local:HeaderedContentControl.ChildContent>
+        </local:HeaderedContentControl>
+        <local:HeaderedContentControl Grid.ColumnSpan="2" Grid.Row="2" Margin="10" Header="Bottom header">
+            <local:HeaderedContentControl.ChildContent>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                <syncfusion:SfCircularGauge Width="200"/>
+                    <syncfusion:SfCircularGauge Width="200" Grid.Column="1" />
+                    <syncfusion:SfCircularGauge Width="200" Grid.Column="2" />
+                    <syncfusion:SfCircularGauge Width="200" Grid.Column="3"/>
+                    <syncfusion:SfCircularGauge Width="200" Grid.Column="4"/>
+                </Grid>
+            </local:HeaderedContentControl.ChildContent>
+        </local:HeaderedContentControl>
     </Grid>
 </Window>

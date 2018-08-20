@@ -23,6 +23,7 @@ namespace UserControlSample
         public MainWindow()
         {
             InitializeComponent();
+            
         }
     }
 }
